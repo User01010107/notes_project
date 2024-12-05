@@ -46,12 +46,18 @@ const Home = () => {
         style = {{
             overlay: {
                 backgroundColor: "rgba(0,0,0,0,2)",
-            },
+            }
         }}
         contentLabel=""
         className="w-[40%] max-h-3/4 bg-white rounded-md mx-auto mt-14 p-5 overflow-scroll"
         >
-            <AddEditNotes/>
+            <AddEditNotes
+            type={openAddEditModal.type}
+            noteData={openAddEditModal.data}
+            onClose={() => {
+                setopenAddEditModal({isShown: false, type: "add", data: null});
+            }}
+            />
 
         </Modal>
 

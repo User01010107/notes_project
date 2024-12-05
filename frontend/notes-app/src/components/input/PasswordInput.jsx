@@ -30,7 +30,7 @@ const PasswordInput = ({value, onChange, placeholder }) => {
                 className="text-primary cursor-pointer"
                 onClick={() => toggleShowPassword()} 
             />
-            )};
+            )}
 
         </div>
     );
